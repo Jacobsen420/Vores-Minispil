@@ -2,3 +2,4 @@
 eller noget lignende
 */
 
+let luder= "Rasmus";
