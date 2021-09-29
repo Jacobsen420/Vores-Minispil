@@ -5,6 +5,9 @@ eller noget lignende
   this.canvas.width = 1000;
   this.canvas.height = 1000;
 
+  let spiligang=true;
+  let xspeed= 4;
+  let newspeed;
 let firkant;
 class boks {
   constructor(x,y, bredde,dybde,hastighed){
@@ -22,5 +25,6 @@ class boks {
     ctx.fillRect(this.x,this.y,this.bredde,this.dybde);
   }
 }
-   firkant= new boks(650, 650, 100, 100, 10);
+newspeed=xspeed;
+   firkant= new boks(700, 650, 100, 100, 10);
    firkant.draw();
