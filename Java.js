@@ -5,8 +5,7 @@ eller noget lignende
   canvas.width = 1000;
   canvas.height = 1000;
 
-  let xspeed= 4;
-  let newspeed;
+
 let firkant;
 class boks {
   constructor(x,y, bredde,dybde,hastighed){
@@ -18,7 +17,7 @@ class boks {
 
   }
   draw(){
-    
+
 
     let ctx = canvas.getContext("2d");
     ctx.fillStyle = "#FF0000";
@@ -27,7 +26,7 @@ class boks {
   }
 
   move(e) {
-  
+
     console.log(e.keyCode)
 
     if (e.keyCode == 37) {
@@ -36,7 +35,7 @@ class boks {
     if (e.keyCode == 39) {
       this.x += this.hastighed
     }
-  
+
 
   }
 
@@ -46,20 +45,20 @@ class boks {
 
 newspeed=xspeed;
    firkant= new boks(700, 650, 100, 100, 30);
-  
+
    document.addEventListener('keydown', function(event) {
     firkant.move(event);
 
   }
   )
 
- 
+
 
 function loop() {
   let ctx = canvas.getContext("2d");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   firkant.draw();
   //firkant.move();
-  
+
 }
 setInterval(loop, 0)
