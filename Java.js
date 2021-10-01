@@ -2,10 +2,9 @@
 eller noget lignende
 */
   canvas = document.getElementById("canvas");
-  this.canvas.width = 1000;
-  this.canvas.height = 1000;
+  canvas.width = 1000;
+  canvas.height = 1000;
 
-  let spiligang=true;
   let xspeed= 4;
   let newspeed;
 let firkant;
@@ -19,12 +18,48 @@ class boks {
 
   }
   draw(){
+    
+
     let ctx = canvas.getContext("2d");
     ctx.fillStyle = "#FF0000";
 
     ctx.fillRect(this.x,this.y,this.bredde,this.dybde);
   }
+
+  move(e) {
+  
+    console.log(e.keyCode)
+
+    if (e.keyCode == 37) {
+      this.x -= this.hastighed
+    }
+    if (e.keyCode == 39) {
+      this.x += this.hastighed
+    }
+  
+
+  }
+
 }
+
+
+
 newspeed=xspeed;
-   firkant= new boks(700, 650, 100, 100, 10);
-   firkant.draw();
+   firkant= new boks(700, 650, 100, 100, 30);
+  
+   document.addEventListener('keydown', function(event) {
+    firkant.move(event);
+
+  }
+  )
+
+ 
+
+function loop() {
+  let ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  firkant.draw();
+  //firkant.move();
+  
+}
+setInterval(loop, 0)
