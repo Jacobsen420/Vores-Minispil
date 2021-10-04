@@ -38,6 +38,7 @@ class boks {
       this.x += this.hastighed
     }
 
+
     if (this.x < -10){
       this.x = 1830;
     }
