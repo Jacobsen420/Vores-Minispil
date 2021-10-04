@@ -2,8 +2,8 @@
 eller noget lignende
 */
   canvas = document.getElementById("canvas");
-  canvas.width = 1000;
-  canvas.height = 1000;
+  canvas.width = 1900;
+  canvas.height = 930;
 
   let xspeed= 4;
   let newspeed;
@@ -33,10 +33,18 @@ class boks {
     if (e.keyCode == 37) {
       this.x -= this.hastighed
     }
+
     if (e.keyCode == 39) {
       this.x += this.hastighed
     }
-  
+
+    if (this.x < -10){
+      this.x = 1830;
+    }
+    
+    if (this.x > 1830){
+      this.x = -10;
+    }
 
   }
 
@@ -52,6 +60,7 @@ newspeed=xspeed;
 
   }
   )
+  
 
  
 
@@ -59,7 +68,10 @@ function loop() {
   let ctx = canvas.getContext("2d");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   firkant.draw();
+
+
   //firkant.move();
   
 }
 setInterval(loop, 0)
+
