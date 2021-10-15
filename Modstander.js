@@ -39,3 +39,4 @@ move() {
 
 - hvis det kan nås, så at man får point for at absorbere modstanderen.
 */
+//du gay

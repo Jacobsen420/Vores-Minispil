@@ -76,3 +76,5 @@ function loop() {
 
 }
 setInterval(loop, 0)
+
+//du gay
