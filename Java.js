@@ -2,8 +2,8 @@
 eller noget lignende
 */
   canvas = document.getElementById("canvas");
-  canvas.width = 1900;
-  canvas.height = 930;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 
   let xspeed= 4;
   let newspeed;
