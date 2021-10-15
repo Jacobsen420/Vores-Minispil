@@ -1,12 +1,12 @@
 /*vi tænker vi laver et spil med bolde som man skal spise
 eller noget lignende
 */
+
   canvas = document.getElementById("canvas");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  let xspeed= 4;
-  let newspeed;
+  
 let firkant;
 class boks {
   constructor(x,y, bredde,dybde,hastighed){
@@ -40,12 +40,12 @@ class boks {
     }
 
 
-    if (this.x < -10){
-      this.x = 1830;
+    if (this.x < -20){
+      this.x = 1900;
     }
 
-    if (this.x > 1830){
-      this.x = -10;
+    if (this.x > 1900){
+      this.x = -20;
     }
 
   }
@@ -54,7 +54,6 @@ class boks {
 
 
 
-newspeed=xspeed;
    firkant= new boks(700, 650, 100, 100, 30);
 
    document.addEventListener('keydown', function(event) {
@@ -71,9 +70,12 @@ function loop() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   firkant.draw();
   modstander.draw();
+  modstander.move();
 
 
   //firkant.move();
 
 }
 setInterval(loop, 0)
+
+//du gay
