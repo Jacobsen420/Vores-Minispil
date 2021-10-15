@@ -15,6 +15,7 @@ draw(){
   ctx.fillRect(this.x , this.y, this.bredde,  this.dybde);
 }
 
+<<<<<<< HEAD
 
 
 move() {
@@ -40,3 +41,8 @@ move() {
 - hvis det kan nås, så at man får point for at absorbere modstanderen.
 */
 //du gay
+=======
+ }
+
+ modstander= new fjende(500, 200, 100, 100, 30);
+>>>>>>> 2aabbe33d4c7a7f2418e53223e9a21c24b862abd

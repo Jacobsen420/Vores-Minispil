@@ -16,6 +16,7 @@ class boks {
     this.dybde=dybde;
     this.hastighed=hastighed;
 
+
   }
   draw(){
 
