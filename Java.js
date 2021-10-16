@@ -2,80 +2,80 @@
 eller noget lignende
 */
 
-  canvas = document.getElementById("canvas");
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+canvas = document.getElementById("canvas");
+canvas.width = window.innerWidth - 30;
+canvas.height = window.innerHeight - 20;
 
 
 let firkant;
 class boks {
-  constructor(x,y, bredde,dybde,hastighed){
-    this.x=x;
-    this.y=y;
-    this.bredde=bredde;
-    this.dybde=dybde;
-    this.hastighed=hastighed;
+constructor(x,y, bredde,dybde,hastighed){
+  this.x=x;
+  this.y=y;
+  this.bredde=bredde;
+  this.dybde=dybde;
+  this.hastighed=hastighed;
 
 
+}
+draw(){
+
+
+  let ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#FF0000";
+
+  ctx.fillRect(this.x,this.y,this.bredde,this.dybde);
+}
+
+move(e) {
+
+  console.log(e.keyCode)
+
+  if (e.keyCode == 37) {
+    this.x -= this.hastighed
   }
-  draw(){
 
-
-    let ctx = canvas.getContext("2d");
-    ctx.fillStyle = "#FF0000";
-
-    ctx.fillRect(this.x,this.y,this.bredde,this.dybde);
+  if (e.keyCode == 39) {
+    this.x += this.hastighed
   }
 
-  move(e) {
 
-    console.log(e.keyCode)
-
-    if (e.keyCode == 37) {
-      this.x -= this.hastighed
-    }
-
-    if (e.keyCode == 39) {
-      this.x += this.hastighed
-    }
-
-
-    if (this.x < -20){
-      this.x = 1900;
-    }
-
-    if (this.x > 1900){
-      this.x = -20;
-    }
-
+  if (this.x < -20){
+    this.x = innerWidth;
   }
+
+  if (this.x > innerWidth){
+    this.x = -20;
+  }
+
+}
 
 }
 
 
 
-   firkant= new boks(700, 650, 100, 100, 30);
+ firkant= new boks(700, 650, 100, 100, 30);
 
-   document.addEventListener('keydown', function(event) {
-    firkant.move(event);
+ document.addEventListener('keydown', function(event) {
+  firkant.move(event);
 
-  }
-  )
+}
+)
 
 
 
 
 function loop() {
-  let ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  firkant.draw();
-  modstander.draw();
-  modstander.move();
+let ctx = canvas.getContext("2d");
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+firkant.draw();
+modstander.draw();
+modstander.move();
 
-  for(let i=0; i<fjender.length;i++){
-    fjender[i].draw();
-    fjender[i].move();
-  }
+for(let i=0; i < fjender.length; i++){
+  fjender[i].draw();
+  fjender[i].move();
+}
 }
 setInterval(loop, 0)
 setInterval(fjende.create, 500);
