@@ -1,6 +1,7 @@
 let modstander;
-
+let fjender=[];
 class fjende{
+
   constructor(x, y, bredde,dybde,hastighed){
   this.x = Math.random() * window.innerWidth;
   this.y = y;
@@ -15,7 +16,7 @@ draw(){
   ctx.fillRect(this.x , this.y, this.bredde,  this.dybde);
 }
 
-<<<<<<< HEAD
+
 
 
 move() {
@@ -24,12 +25,17 @@ move() {
   this.y += this.hastighed
 
 }
+static create(){
+  new fjende(20,20,30,30,2);
 
+}
+create(){
+  fjender.push(new fjende(20,20,20,20,2));
+}
 
  }
 
  modstander= new fjende(this.x, 0, 100, 100, 1);
-
 
 
 /*
@@ -40,9 +46,4 @@ move() {
 
 - hvis det kan nås, så at man får point for at absorbere modstanderen.
 */
-//du gay
-=======
- }
-
- modstander= new fjende(500, 200, 100, 100, 30);
->>>>>>> 2aabbe33d4c7a7f2418e53223e9a21c24b862abd
+//du

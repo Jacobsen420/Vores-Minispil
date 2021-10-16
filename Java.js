@@ -6,7 +6,7 @@ eller noget lignende
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  
+
 let firkant;
 class boks {
   constructor(x,y, bredde,dybde,hastighed){
@@ -72,10 +72,10 @@ function loop() {
   modstander.draw();
   modstander.move();
 
-
-  //firkant.move();
-
+  for(let i=0; i<fjender.length;i++){
+    fjender[i].draw();
+    fjender[i].move();
+  }
 }
 setInterval(loop, 0)
-
-//du gay
+setInterval(fjende.create, 500);
