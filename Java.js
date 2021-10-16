@@ -9,10 +9,10 @@ canvas.height = window.innerHeight -30;
 
 let firkant;
 class boks {
-constructor(x,y, bredde,dybde,hastighed){
+constructor(x,y, brede,dybde,hastighed){
   this.x=x;
   this.y=y;
-  this.bredde=bredde;
+  this.brede=brede;
   this.dybde=dybde;
   this.hastighed=hastighed;
 
@@ -24,7 +24,7 @@ draw(){
   let ctx = canvas.getContext("2d");
   ctx.fillStyle = "#FF0000";
 
-  ctx.fillRect(this.x,this.y,this.bredde,this.dybde);
+  ctx.fillRect(this.x,this.y,this.brede,this.dybde);
 }
 
 move(e) {

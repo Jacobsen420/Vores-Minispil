@@ -2,9 +2,9 @@ let modstander;
 let fjender=[];
 class fjende{
 
-  constructor(x, y, bredde,dybde,hastighed){
+  constructor(x, yy, bredde,dybde,hastighed){
   this.x = Math.random(x) * (window.innerWidth - 120);
-  this.y = y;
+  this.yy = yy;
   this.bredde=bredde;
   this.dybde=dybde;
   this.hastighed=hastighed;
@@ -13,7 +13,7 @@ class fjende{
 draw(){
   let ctx = canvas.getContext("2d");
   ctx.fillStyle = "#000000";
-  ctx.fillRect(this.x , this.y, this.bredde,  this.dybde);
+  ctx.fillRect(this.x , this.yy, this.bredde,  this.dybde);
 }
 
 
@@ -21,9 +21,11 @@ draw(){
 
 move() {
 
-  if (this.y < innerHeight)
-  this.y += this.hastighed
+  if (this.yy < innerHeight)
+  this.yy += this.hastighed
 
+  if(this.yy>1000)
+  console.log("hej")
 }
 static create(){
   new fjende(this.x,0,100,100,1);
