@@ -3,7 +3,7 @@ let fjender=[];
 class fjende{
 
   constructor(x, y, bredde,dybde,hastighed){
-  this.x = Math.random(x) * (window.innerWidth - 100);
+  this.x = Math.random(x) * (window.innerWidth - 120);
   this.y = y;
   this.bredde=bredde;
   this.dybde=dybde;
@@ -12,7 +12,7 @@ class fjende{
 }
 draw(){
   let ctx = canvas.getContext("2d");
-  ctx.fillStyle = "#FF0000";
+  ctx.fillStyle = "#000000";
   ctx.fillRect(this.x , this.y, this.bredde,  this.dybde);
 }
 

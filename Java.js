@@ -3,8 +3,8 @@ eller noget lignende
 */
 
 canvas = document.getElementById("canvas");
-canvas.width = window.innerWidth ;
-canvas.height = window.innerHeight ;
+canvas.width = window.innerWidth-20 ;
+canvas.height = window.innerHeight -30;
 
 
 let firkant;
@@ -78,4 +78,4 @@ for(let i=0; i < fjender.length; i++){
 }
 }
 setInterval(loop, 0)
-setInterval(modstander.create, 500);
+setInterval(modstander.create, 2000);
