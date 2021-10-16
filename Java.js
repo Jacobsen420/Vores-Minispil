@@ -1,10 +1,10 @@
-/*vi tænker vi laver et spil med bolde som man skal spise
+/*vi tænker vi laver et spil med bolde  som man skal spise
 eller noget lignende
 */
 
 canvas = document.getElementById("canvas");
-canvas.width = window.innerWidth - 30;
-canvas.height = window.innerHeight - 20;
+canvas.width = window.innerWidth ;
+canvas.height = window.innerHeight ;
 
 
 let firkant;
@@ -78,4 +78,4 @@ for(let i=0; i < fjender.length; i++){
 }
 }
 setInterval(loop, 0)
-setInterval(fjende.create, 500);
+setInterval(modstander.create, 500);

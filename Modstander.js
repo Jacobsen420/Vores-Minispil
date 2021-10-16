@@ -26,18 +26,13 @@ move() {
 
 }
 static create(){
-  new fjende(this.x,20,30,30,2);
+  new fjende(this.x,0,100,100,1);
 console.log("hej")
 }
 create(){
-<<<<<<< HEAD
-  fjender.push(new fjende(this.x,20,20,20,2));
-=======
-  fjender.push(new fjende(20, 20, 20, 20, 2));
->>>>>>> 0be14f6cc465ff542fda4d2d82a25c8621211450
+  fjender.push(new fjende(this.x,0,100,100,1));
 }
 
  }
 
  modstander= new fjende(this.x, 0, 100, 100, 1);
- 
