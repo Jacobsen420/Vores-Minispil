@@ -21,13 +21,13 @@ draw(){
 
 move() {
 
-  if (this.y < 1300)
+  if (this.y < innerHeight)
   this.y += this.hastighed
 
 }
 static create(){
   new fjende(this.x,0,100,100,1);
-console.log("hej")
+
 }
 create(){
   fjender.push(new fjende(this.x,0,100,100,1));
