@@ -26,11 +26,11 @@ move() {
 
 }
 static create(){
-  new fjende(20,20,30,30,2);
-
+  new fjende(this.x,20,30,30,2);
+console.log("hej")
 }
 create(){
-  fjender.push(new fjende(20,20,20,20,2));
+  fjender.push(new fjende(this.x,20,20,20,2));
 }
 
  }
