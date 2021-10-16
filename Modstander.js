@@ -3,7 +3,7 @@ let fjender=[];
 class fjende{
 
   constructor(x, y, bredde,dybde,hastighed){
-  this.x = Math.random() * window.innerWidth;
+  this.x = Math.random(x) * (window.innerWidth - 100);
   this.y = y;
   this.bredde=bredde;
   this.dybde=dybde;
@@ -21,7 +21,7 @@ draw(){
 
 move() {
 
-  if (this.y < 1000)
+  if (this.y < 1300)
   this.y += this.hastighed
 
 }
@@ -30,20 +30,10 @@ static create(){
 
 }
 create(){
-  fjender.push(new fjende(20,20,20,20,2));
+  fjender.push(new fjende(20, 20, 20, 20, 2));
 }
 
  }
 
  modstander= new fjende(this.x, 0, 100, 100, 1);
-
-
-/*
-- få modstander til at bevæge sig ned ad random.
-- få spilleren til at absorbere modstander
-
-
-
-- hvis det kan nås, så at man får point for at absorbere modstanderen.
-*/
-//du
+ 
