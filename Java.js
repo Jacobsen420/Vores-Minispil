@@ -18,6 +18,7 @@ constructor(x,y, brede,dybde,hastighed){
 
 
 }
+
 draw(){
 
 
@@ -25,6 +26,8 @@ draw(){
   ctx.fillStyle = "#FF0000";
 
   ctx.fillRect(this.x,this.y,this.brede,this.dybde);
+
+
 }
 
 move(e) {
@@ -47,7 +50,7 @@ move(e) {
   if (this.x > innerWidth){
     this.x = -20;
   }
-
+ 
 }
 
 }
