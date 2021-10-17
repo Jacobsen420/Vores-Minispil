@@ -69,12 +69,16 @@ function loop() {
 let ctx = canvas.getContext("2d");
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 firkant.draw();
+
 modstander.draw();
 modstander.move();
+
+
 
 for(let i=0; i < fjender.length; i++){
   fjender[i].draw();
   fjender[i].move();
+
 }
 }
 setInterval(loop, 0)

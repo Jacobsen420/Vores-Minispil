@@ -18,15 +18,27 @@ draw(){
 
 
 
-
 move() {
 
-  if (this.yy < innerHeight)
+  if (this.yy < 1391)
   this.yy += this.hastighed
 
-  if(this.yy>1000)
-  console.log("hej")
+  if(this.yy>100)
+firkant(this.brede+=10)
+
+
+  if (this.yy > 1390)
+  this.xx = 3000
+
+  if (this.yy > 1390)
+  this.yy = -1000000
+
+
+
 }
+
+
+
 static create(){
   new fjende(this.x,0,100,100,1);
 
