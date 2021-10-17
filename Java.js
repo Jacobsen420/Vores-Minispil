@@ -2,22 +2,31 @@
 eller noget lignende
 */
 
+//her tegner vi selve vores spilleramme, eller det "område" man kan spille på, som så er hele skærmen i fullscreen
 canvas = document.getElementById("canvas");
 canvas.width = window.innerWidth-20 ;
 canvas.height = window.innerHeight -30;
 
-
+//her igen laver vi vores variable
 let firkant;
+
+//en klasse til vores firkant som vi skal kunne bevæge
 class boks {
-constructor(x,y, brede,dybde,hastighed){
+
+  // vores constructors til vores firkant, med nogle variable inden i.
+  // vi prøvede at sætte de 2 classes sammen lidt ligesom at lave en child til firkanten 
+  // ved hjælp af "extends" og "super" som extender klassen med den anden, og hvor super bruges til
+  // at hive variablerne brugt i den "voksne" klasse hen til "børne" klassen
+  // det fungerede så ikke...
+  constructor(x,y, brede,dybde,hastighed){
   this.x=x;
   this.y=y;
   this.brede=brede;
   this.dybde=dybde;
   this.hastighed=hastighed;
+  }
 
 
-}
 draw(){
 
 
@@ -25,6 +34,8 @@ draw(){
   ctx.fillStyle = "#FF0000";
 
   ctx.fillRect(this.x,this.y,this.brede,this.dybde);
+
+
 }
 
 move(e) {
@@ -47,7 +58,7 @@ move(e) {
   if (this.x > innerWidth){
     this.x = -20;
   }
-
+ 
 }
 
 }
