@@ -14,7 +14,7 @@ let firkant;
 class boks {
 
   // vores constructors til vores firkant, med nogle variable inden i.
-  // vi prøvede at sætte de 2 classes sammen lidt ligesom at lave en child til firkanten 
+  // vi prøvede at sætte de 2 classes sammen lidt ligesom at lave en child til firkanten
   // ved hjælp af "extends" og "super" som extender klassen med den anden, og hvor super bruges til
   // at hive variablerne brugt i den "voksne" klasse hen til "børne" klassen
   // det fungerede så ikke...
@@ -58,7 +58,7 @@ move(e) {
   if (this.x > innerWidth){
     this.x = -20;
   }
- 
+
 }
 
 }
@@ -76,20 +76,17 @@ move(e) {
 
 
 
+
 function loop() {
 let ctx = canvas.getContext("2d");
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 firkant.draw();
-
 modstander.draw();
 modstander.move();
-
-
 
 for(let i=0; i < fjender.length; i++){
   fjender[i].draw();
   fjender[i].move();
-
 }
 }
 setInterval(loop, 0)
