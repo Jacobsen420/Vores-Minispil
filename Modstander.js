@@ -31,8 +31,7 @@ move() {
   if (this.yy < 1391)
   this.yy += this.hastighed
 
-  if(this.yy>100)
-firkant(this.brede+=10)
+
 
 //her sender vi den væk i x aksen når den er forbi 1390
   if (this.yy > 1390)
